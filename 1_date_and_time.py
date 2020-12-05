@@ -24,9 +24,9 @@ def str_2_datetime(dt):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    date_format = datetime.strptime(dt, '%d/%m/%y.%H:%M:%S')
+    date_format = datetime.strptime(dt, '%d/%m/%y %H:%M:%S.%f')
     return date_format
 
 if __name__ == "__main__":
     print_days()
-    print(str_2_datetime("01/01/20.12:10:03"))
+    print(str_2_datetime("01/01/20 12:10:03.234567"))
